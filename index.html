@@ -18,6 +18,18 @@
             opacity: 1.0;
         }
         
+        #image {
+            position: relative;
+            margin : 0 auto;
+            width : 50%;
+            height: auto;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
         #board {
             position: absolute;
             margin : 0 auto 40px;
@@ -55,7 +67,7 @@
 </head>
 <body onload="init();">
     <h1>トイレットペーパー</h1>
-    <div><img id="paper" src="./Resources/paper1.png" onclick="pullpaper();"></div>
+    <div id="image"><img id="paper" src="./Resources/paper1.png" onclick="pullpaper();"></div>
     <audio id="sound" preload="auto" src="./Resources/paper.mp3"></audio>
     <audio id="sound2" preload="auto" src="./Resources/toiletwater.mp3"></audio>
     <div>↑あんまりクリックしないでくださいね！</div>
