@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>トイレットペーパー</title>
+    <!--Script-->
+	<script src="../../BasicTool/main.js"></script>
+	<script src="../../BasicTool/ga.js"></script>
+	<script src="./program.js"></script>
+    <style>
+        body {
+            text-align: center;
+            width: auto;
+            height: auto;
+            color:black;
+            background-color: white;
+            //background-color:rgba(0,0,0,0);
+            opacity: 1.0;
+        }
+        
+        #board {
+            position: absolute;
+            margin : 0 auto 40px;
+            bottom: 0px;
+            width : 100%;
+            font-size : 64px;
+            text-align : center;
+            overflow : hidden;
+        }
+        
+        #board p{
+            margin:0;
+            display : inline-block;
+            padding-left: 100%;
+            white-space : nowrap;
+            line-height : 1em;
+            animation : scrollBoard 5s linear infinite;
+        }
+            @keyframes scrollBoard{
+            0% { transform: translateX(0)}
+            100% { transform: translateX(-100%)}
+        }
+        
+        #footer {
+            position: absolute;
+            display: inline-block;
+            bottom:0px;
+            left: 0px;
+            width:100%;
+            color: #aaa;
+            font-size: 16px;
+            background: #555;
+        }
+    </style>
+</head>
+<body onload="init();">
+    <h1>トイレットペーパー</h1>
+    <div><img id="paper" src="./Resources/paper1.png" onclick="pullpaper();"></div>
+    <audio id="sound" preload="auto" src="./Resources/paper.mp3"></audio>
+    <audio id="sound2" preload="auto" src="./Resources/toiletwater.mp3"></audio>
+    <div>↑あんまりクリックしないでくださいね！</div>
+    <div id="board"></div>
+    <div id="footer">
+        <script>
+            document.write("2021©️" + document.domain);
+        </script>
+    </div>
+</body>
+</html>
